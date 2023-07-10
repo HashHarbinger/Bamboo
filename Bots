@@ -1,0 +1,20 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        while (true)
+        {
+            DateTime now = DateTime.Now;
+            Console.WriteLine("Текущее время: " + now.ToLongTimeString());
+            Console.WriteLine("Текущая дата: " + now.ToLongDateString());
+
+            // Обновление каждую секунду
+            System.Threading.Thread.Sleep(1000);
+
+            // Очистка консоли для обновления времени и даты
+            Console.Clear();
+        }
+    }
+}
